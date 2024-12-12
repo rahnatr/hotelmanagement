@@ -15,7 +15,8 @@ class Hotel_Registration(models.Model):
     
     def __str__(self):
         return self.hotel_name
-    
+
+# users access to the system    
 class User_Info(models.Model):
     Roll_Choices = [
         ('admin','Admin'),
@@ -27,6 +28,7 @@ class User_Info(models.Model):
     phonenumber = models.CharField(max_length=15, null=True, blank=True)
     address = models.TextField(null=True, blank=True)
     
+#customer details
 class Customer(models.Model):   
     Status_Choice = [
         ('check_in','Check_in'),  #cuurently using the room facility
@@ -50,7 +52,7 @@ class Customer(models.Model):
         return self.Customer_name
     
 
-    
+#room details
 class Room(models.Model):
     Room_Choices = [
         ('single','Single'),
