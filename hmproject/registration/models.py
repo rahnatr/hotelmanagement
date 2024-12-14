@@ -5,11 +5,11 @@ from django.contrib.auth.models import User
 # Create your models here.
 #model for hotel details
 class Hotel_Registration(models.Model):
-    hotel_id = models.CharField(blank=False,max_length=100) #check need or not
-    hotel_name = models.CharField(blank=False,max_length=100)
-    hotel_place = models.CharField(blank=True,max_length=100)
-    hotel_phone = models.CharField(blank=True,max_length=100)
-    hotel_adress = models.CharField(blank=True,max_length=500)
+    # hotel_id = models.CharField(max_length=20, null=True, blank=False) #check need or not
+    hotel_name = models.CharField(max_length=20, null=True, blank=True)
+    hotel_place = models.CharField(max_length=20, null=True, blank=True)
+    hotel_phone = models.CharField(max_length=20, null=True, blank=True)
+    hotel_address = models.CharField(max_length=200, null=True, blank=True)
     created_at=models.DateField(auto_now_add=True)
     updated_at=models.DateField(auto_now=True)
     
